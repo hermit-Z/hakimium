@@ -26,6 +26,14 @@
       </div>
 
       <v-spacer></v-spacer>
+      <!-- -->
+      <v-switch
+        class="mt-5 pa-2"
+        v-model="$vuetify.theme.dark"
+        label="Theme"
+        persistent-hint
+      ></v-switch>
+      <!-- -->
       <v-icon>fas fa-lock</v-icon>
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -36,7 +44,6 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
       <HelloWorld/>
     </v-main>
