@@ -34,6 +34,7 @@
         persistent-hint
       ></v-switch>
       <!-- -->
+      {{ $vuetify.lang.t('$vuetify.close') }}
       <v-icon>fas fa-lock</v-icon>
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -47,18 +48,20 @@
     <v-main>
       <HelloWorld/>
     </v-main>
+    <footerr/>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
-
+import footerr from './components/footer.vue'
 export default Vue.extend({
   name: 'App',
 
   components: {
     HelloWorld,
+    footerr,
   },
 
   data: () => ({

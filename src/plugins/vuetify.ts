@@ -5,6 +5,11 @@ import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify);
 
+// Translation provided by Vuetify (typescript) exemple pl
+//import pl from 'vuetify/src/locale/pl'
+import en from 'vuetify/src/locale/en'
+import fr from 'vuetify/src/locale/fr'
+import ar from 'vuetify/src/locale/ar'
 export default new Vuetify({
 		icons: {
         iconfont: 'fa',
@@ -26,4 +31,9 @@ export default new Vuetify({
 				},
 		
 		},
+        lang: {
+        locales: { en, fr, ar },
+        current: 'fr',
+        },
+
 });
