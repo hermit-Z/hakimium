@@ -58,6 +58,9 @@ export default new Vuetify({
                   secondary: colors.grey.darken1,
                   accent: colors.shades.black,
                   error: colors.red.accent3,
+                  info: "#2196F3",
+                  success: "#76FF03",
+                  warning: colors.amber.darken1,
                   background: colors.indigo.lighten4
 						},
               dark: {
@@ -66,6 +69,9 @@ export default new Vuetify({
                   secondary: colors.grey.lighten1,
                   accent: colors.shades.white,
                   error: colors.red.darken3,
+                  info: "#2196F3",
+                  success: "#4CAF50",
+                  warning:colors.orange.darken4,
                   background: colors.indigo.darken4
 
                         },
