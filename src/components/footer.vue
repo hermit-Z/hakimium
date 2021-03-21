@@ -9,10 +9,11 @@
         lazy-validation
       >
        <v-row class="pa-0 ma-0">
-         <v-col cols="8" class="pa-0 ma-0" >
-          <v-text-field v-model="email" :rules="loginEmailRules" label="Subscibe in newsletters" required></v-text-field>
+         <v-col cols="8" class="pa-0 ml-0" >
+          <v-text-field v-model="email"  class="primary lighten-1 white--text text-center ml-0"
+          :rules="loginEmailRules" label="Subscibe in newsletters" required></v-text-field>
          </v-col>
-         <v-col cols="4" class="pl-0 ml-0">
+         <v-col cols="4" class="primary lighten-1 pl-0 ml-0">
           <v-btn
           tile
           color="success ml-0"
@@ -29,7 +30,7 @@
      <v-flex md6 xs12>
          <v-card
            tile
-           class="indigo lighten-1 white--text text-center "
+           class="primary lighten-1 white--text text-center "
          >
         
          <v-btn
@@ -43,7 +44,7 @@
          </v-btn>
          </v-card>
 
-				<v-card  class="indigo lighten-1 white--text text-center  pa-1 " >
+				<v-card  class="primary lighten-1 white--text text-center  pa-1 " >
                  <v-icon>mdi-copyright</v-icon> - <strong>copyright</strong> - {{ new Date().getFullYear() }}
                 </v-card>
      </v-flex>
