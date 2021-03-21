@@ -58,15 +58,15 @@ export default new Vuetify({
                   secondary: colors.grey.darken1,
                   accent: colors.shades.black,
                   error: colors.red.accent3,
-                  background: colors.indigo.lighten5
+                  background: colors.indigo.lighten4
 						},
               dark: {
 
                   primary: colors.purple.darken3,
                   secondary: colors.grey.lighten1,
-                  accent: colors.shades.darken3,
+                  accent: colors.shades.white,
                   error: colors.red.darken3,
-                  background: colors.indigo.darken5
+                  background: colors.indigo.darken4
 
                         },
 				
