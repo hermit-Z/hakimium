@@ -54,16 +54,21 @@ export default new Vuetify({
         theme: {
            themes:{
               light: {
-                  primary: colors.purple,
+                  primary: colors.purple.lighten3,
                   secondary: colors.grey.darken1,
                   accent: colors.shades.black,
                   error: colors.red.accent3,
                   background: colors.indigo.lighten5
 						},
               dark: {
-                primary: colors.blue.lighten3,
-                background: colors.indigo.base
-              },
+
+                  primary: colors.purple.darken3,
+                  secondary: colors.grey.lighten1,
+                  accent: colors.shades.darken3,
+                  error: colors.red.darken3,
+                  background: colors.indigo.darken5
+
+                        },
 				
 				},
 		

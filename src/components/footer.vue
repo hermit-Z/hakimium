@@ -2,21 +2,22 @@
   <v-footer>
    <v-container fluid>
     <v-layout row wrap>
-      <v-flex md3 xs12>
+      <v-flex md3 xs12   class="pa-0 ma-0">
       <v-form
         ref="form"
 		v-model="valid"
         lazy-validation
+        class="pa-0 ma-0"
       >
        <v-row class="pa-0 ma-0">
-         <v-col cols="8" class="pa-0 ml-0" >
+         <v-col cols="8" class="primary lighten pa-0 ml-0" >
           <v-text-field v-model="email"  class="primary lighten-1 white--text text-center ml-0"
           :rules="loginEmailRules" label="Subscibe in newsletters" required></v-text-field>
          </v-col>
-         <v-col cols="4" class="primary lighten-1 pl-0 ml-0">
+         <v-col cols="4" class="primary lighten-1 pa-0 ml-0">
           <v-btn
           tile
-          color="success ml-0"
+          color="success pa-2 ml-0 mt-2"
           >
           <v-icon left>
             mdi-email-newsletter
@@ -27,7 +28,7 @@
         </v-row>
        </v-form>
       </v-flex>
-     <v-flex md6 xs12>
+     <v-flex md6 xs12   class="pa-0 ma-0">
          <v-card
            tile
            class="primary lighten-1 white--text text-center "
@@ -44,12 +45,12 @@
          </v-btn>
          </v-card>
 
-				<v-card  class="primary lighten-1 white--text text-center  pa-1 " >
+				<v-card  class="indigo lighten-1 white--text text-center  pa-1 " >
                  <v-icon>mdi-copyright</v-icon> - <strong>copyright</strong> - {{ new Date().getFullYear() }}
                 </v-card>
      </v-flex>
      <v-flex md3 class="pa-0 ma-0" >
-      <v-card class="indigo lighten-1 white--text text-center  pa-1 "  >
+      <v-card class="primary lighten-1 white--text text-center  pa-1 ma-0 "  >
        <v-card-title class="pa-0 ma-0">
          Public key fingerprint
        </v-card-title>
