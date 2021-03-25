@@ -27,6 +27,7 @@
 
       <v-spacer></v-spacer>
       <!-- -->
+      <SwitchLocale/>
       <v-switch
         class="mt-5 pa-2"
         v-model="$vuetify.theme.dark"
@@ -55,6 +56,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import SwitchLocale from './components/langS.vue'
 import footerr from './components/footer.vue'
 export default Vue.extend({
   name: 'App',
@@ -62,6 +64,7 @@ export default Vue.extend({
   components: {
     HelloWorld,
     footerr,
+    SwitchLocale,
   },
 
   data: () => ({
