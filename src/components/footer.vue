@@ -10,16 +10,16 @@
         class="pa-0 ma-0"
       >
        <v-row class="pa-0 ma-0">
-         <v-col cols="8" class="primary lighten pa-0 ml-0" >
-          <v-text-field v-model="email"  class="primary lighten-1 white--text text-center ml-0"
+         <v-col cols="8" class="primary pa-0 ml-0" >
+          <v-text-field v-model="email" 
           :rules="loginEmailRules" label="Subscibe in newsletters" required></v-text-field>
          </v-col>
-         <v-col cols="4" class="primary lighten-1 pa-0 ml-0">
+         <v-col cols="4" class="primary pa-0 ml-0">
           <v-btn
           tile
-          color="success pa-2 ml-0 mt-2"
+          class="success therty--text pa-2 ml-0 mt-2"
           >
-          <v-icon left>
+          <v-icon left color="therty">
             mdi-email-newsletter
           </v-icon>
            Subscibe
@@ -31,30 +31,30 @@
      <v-flex md6 xs12   class="pa-0 ma-0">
          <v-card
            tile
-           class="primary lighten-1 white--text text-center "
+           class="primary text-center "
          >
         
          <v-btn
              v-for="icon in iconssm"
              :key="icon.icon"
              :href="icon.href"
-           class="mx-4 white--text"
+           class="mx-4 "
            icon
            >
              <v-icon size="24px">{{icon.icon}}</v-icon>
          </v-btn>
          </v-card>
 
-				<v-card  class="indigo lighten-1 white--text text-center  pa-1 " >
+				<v-card  class="therty text-center  pa-1 " >
                  <v-icon>mdi-copyright</v-icon> - <strong>copyright</strong> - {{ new Date().getFullYear() }}
                 </v-card>
      </v-flex>
      <v-flex md3 class="pa-0 ma-0" >
-      <v-card class="primary lighten-1 white--text text-center  pa-1 ma-0 "  >
-       <v-card-title class="pa-0 ma-0">
+      <v-card class="primary text-center  pa-1 ma-0 "  >
+       <v-card-title class="text-center pa-0 ma-0">
          Public key fingerprint
        </v-card-title>
-       <v-card-text class="pa-0 ma-0" >
+       <v-card-text class="text-center pa-0 ma-0" >
         46021D27570E1FBFD66E
         4A9D7611200F003097FB
        </v-card-text>
