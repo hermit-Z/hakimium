@@ -86,7 +86,7 @@ export default new Vuetify({
                    he, hr, hu, id, it, ja, ko, lt, lv, nl, no, pl, pt, ro,
                    ru, sk, sl, sv, th, tr, uk, ckb, srCyrl, zhHans, zhHant },
 
-        current: 'ja',
+        current: 'en',
         },
 
 });

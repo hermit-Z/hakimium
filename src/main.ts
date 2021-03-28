@@ -4,7 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-
+import FlagIcon from 'vue-flag-icon'
+Vue.use(FlagIcon);
 Vue.config.productionTip = false
 
 new Vue({

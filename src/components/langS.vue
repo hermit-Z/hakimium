@@ -15,11 +15,9 @@
           full-width=false
           class="md1 xs3 lg1"
           > </v-select>
-	<v-btn icon color="pink" @click="StatLang = !StatLang"  v-if="StatLang===false">
-      <v-icon dark>
-        mdi-minus
-      </v-icon>
-
+	<v-btn icon @click="StatLang = !StatLang"  v-if="StatLang===false">
+      {{Select.loca}}
+      <flag :iso="Select.flag" />
 	</v-btn>
   </div>
 </template>
@@ -30,49 +28,49 @@ export default {
   data() {
     return {
             StatLang: false,
-            Select: {loca: 'en',name: 'English',flag: ' '},
+            Select: {loca: 'en',name: 'English',flag: 'GB'},
             items:[
-                  {loca: 'af',name: 'Afrikaans (Afrikaans)',flag: ' '},
-                  {loca: 'ar',name: 'Arabic (اللغة العربية)',flag: ' '},
-                  {loca: 'az',name: 'Azerbaijani (Azərbaycan)',flag: ' '},
-                  {loca: 'bg',name: 'Bulgarian (български)',flag: ' '},
+                  {loca: 'af',name: 'Afrikaans (Afrikaans)',flag: 'ZA'},
+                  {loca: 'ar',name: 'Arabic (اللغة العربية)',flag: 'AE'},
+                  {loca: 'az',name: 'Azerbaijani (Azərbaycan)',flag: 'AZ'},
+                  {loca: 'bg',name: 'Bulgarian (български)',flag: 'BG'},
                   {loca: 'ca',name: 'Catalan (català)',flag: ' '},
                   {loca: 'ckb',name: 'Central Kurdish (کوردی)',flag: ' '},
-                  {loca: 'cs',name: 'Czech (čeština)',flag: ' '},
-                  {loca: 'de',name: 'German (Deutsch)',flag: ' '},
-                  {loca: 'el',name: 'Greek (Ελληνικά)',flag: ' '},
-                  {loca: 'en',name: 'English',flag: ' '},
-                  {loca: 'es',name: 'Spanish (Español)',flag: ' '},
-                  {loca: 'et',name: 'Estonian (eesti)',flag: ' '},
-                  {loca: 'fa',name: 'Persian (فارسی)',flag: ' '},
-                  {loca: 'fi',name: 'Finnish (suomi)',flag: ' '},
-                  {loca: 'fr',name: 'French (Français)',flag: ' '},
-                  {loca: 'he',name: 'Hebrew (עברית)',flag: ' '},
-                  {loca: 'hr',name: 'Croatian (hrvatski jezik)',flag: ' '},
-                  {loca: 'hu',name: 'Hungarian (magyar)',flag: ' '},
-                  {loca: 'id',name: 'Indonesian (Indonesian)',flag: ' '},
-                  {loca: 'it',name: 'Italian (Italiano)',flag: ' '},
-                  {loca: 'ja',name: 'Japanese (日本語)',flag: ' '},
-                  {loca: 'ko',name: 'Korean (한국어)',flag: ' '},
-                  {loca: 'lt',name: 'Lithuanian (lietuvių kalba)',flag: ' '},
-                  {loca: 'lv',name: 'Latvian (latviešu valoda)',flag: ' '},
-                  {loca: 'nl',name: 'Dutch (Nederlands)',flag: ' '},
-                  {loca: 'no',name: 'Norwegian (Norsk)',flag: ' '},
-                  {loca: 'pl',name: 'Polish (język polski)',flag: ' '},
-                  {loca: 'pt',name: 'Portuguese (Português)',flag: ' '},
-                  {loca: 'ro',name: 'Romanian (Română)',flag: ' '},
-                  {loca: 'ru',name: 'Russian (Русский)',flag: ' '},
-                  {loca: 'sk',name: 'Slovak (slovenčina)',flag: ' '},
-                  {loca: 'sl',name: 'Slovene (slovenski jezik)',flag: ' '},
-                  {loca: 'srCyrl',name: 'Serbian (српски језик)',flag: ' '},
-                  {loca: 'srLatn',name: 'Serbian (srpski jezik)',flag: ' '},
-                  {loca: 'sv',name: 'Swedish (svenska)',flag: ' '},
-                  {loca: 'th',name: 'Thai (ไทย)',flag: ' '},
-                  {loca: 'tr',name: 'Turkish (Türkçe)',flag: ' '},
-                  {loca: 'uk',name: 'Ukrainian (Українська)',flag: ' '},
-                  {loca: 'vi',name: 'Vietnamese (Tiếng Việt)',flag: ' '},
-                  {loca: 'zhHans',name: 'Chinese (中文)',flag: ' '},
-                  {loca: 'zhHant',name: 'Chinese (正體中文)',flag: ' '},
+                  {loca: 'cs',name: 'Czech (čeština)',flag: 'CZ'},
+                  {loca: 'de',name: 'German (Deutsch)',flag: 'DE'},
+                  {loca: 'el',name: 'Greek (Ελληνικά)',flag: 'GR'},
+                  {loca: 'en',name: 'English',flag: 'GB'},
+                  {loca: 'es',name: 'Spanish (Español)',flag: 'ES'},
+                  {loca: 'et',name: 'Estonian (eesti)',flag: 'EE'},
+                  {loca: 'fa',name: 'Persian (فارسی)',flag: 'IR'},
+                  {loca: 'fi',name: 'Finnish (suomi)',flag: 'FI'},
+                  {loca: 'fr',name: 'French (Français)',flag: 'FR'},
+                  //{loca: 'he',name: 'Hebrew (עברית)',flag: 'IL'},
+                  {loca: 'hr',name: 'Croatian (hrvatski jezik)',flag: 'HR'},
+                  {loca: 'hu',name: 'Hungarian (magyar)',flag: 'HU'},
+                  {loca: 'id',name: 'Indonesian (Indonesian)',flag: 'ID'},
+                  {loca: 'it',name: 'Italian (Italiano)',flag: 'IT'},
+                  {loca: 'ja',name: 'Japanese (日本語)',flag: 'JP'},
+                  {loca: 'ko',name: 'Korean (한국어)',flag: 'KR'},
+                  {loca: 'lt',name: 'Lithuanian (lietuvių kalba)',flag: 'LT'},
+                  {loca: 'lv',name: 'Latvian (latviešu valoda)',flag: 'LV'},
+                  {loca: 'nl',name: 'Dutch (Nederlands)',flag: 'NL'},
+                  {loca: 'no',name: 'Norwegian (Norsk)',flag: 'NO'},
+                  {loca: 'pl',name: 'Polish (język polski)',flag: 'PL'},
+                  {loca: 'pt',name: 'Portuguese (Português)',flag: 'PT'},
+                  {loca: 'ro',name: 'Romanian (Română)',flag: 'RO'},
+                  {loca: 'ru',name: 'Russian (Русский)',flag: 'RU'},
+                  {loca: 'sk',name: 'Slovak (slovenčina)',flag: 'SK'},
+                  {loca: 'sl',name: 'Slovene (slovenski jezik)',flag: 'SI'},
+                  {loca: 'srCyrl',name: 'Serbian (српски језик)',flag: 'RS'},
+                  {loca: 'srLatn',name: 'Serbian (srpski jezik)',flag: 'RS'},
+                  {loca: 'sv',name: 'Swedish (svenska)',flag: 'SE'},
+                  {loca: 'th',name: 'Thai (ไทย)',flag: 'TH'},
+                  {loca: 'tr',name: 'Turkish (Türkçe)',flag: 'TR'},
+                  {loca: 'uk',name: 'Ukrainian (Українська)',flag: 'UA'},
+                  {loca: 'vi',name: 'Vietnamese (Tiếng Việt)',flag: 'VI'},
+                  {loca: 'zhHans',name: 'Chinese (中文)',flag: 'CN'},
+                  {loca: 'zhHant',name: 'Chinese (正體中文)',flag: 'CN'},
 
                   ],
 	}
