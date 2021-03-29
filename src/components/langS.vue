@@ -28,9 +28,10 @@
        <div class="ma-2" v-for="Nitem in Nitems" :key="Nitem.name" >
           <v-icon>{{Nitem.icon}}</v-icon>
         <!-- <router-link :to="Nitem.url" class="green--text">{{Nitem.name}}</router-link> -->
-		<router-link :to="Nitem.url" class="green--text">{{Nitem.name}}</router-link>
+		<router-link :to="'/'+$vuetify.lang.current + Nitem.url" class="green--text"><!-- {{Nitem.name}} -->{{'/'+$vuetify.lang.current + Nitem.url}} </router-link>
        </div>
       <v-spacer></v-spacer>
+      <router-link to="/" class="green--text" >Home</router-link>
       <!-- -->
       {{ $vuetify.lang.t('$vuetify.close') }}
       {{this.$vuetify.lang.current}}
@@ -115,14 +116,17 @@ export default {
                   ],
 
                Nitems: [
-                       {name:'Home',icon: 'mdi-home' ,url: '"this.$vuetify.lang.current" + "/"'},  
-                       {name:'About',icon: 'mdi-book-account' ,url: '{/About'},  
+                       {name:'Home',icon: 'mdi-home' ,url: '/'},  
+                       {name:'About',icon: 'mdi-book-account' ,url: '/About'},  
                        {name:'Services',icon: 'mdi-cog' ,url: ''},  
                        //{name:'Product',icon: 'mdi-folder-home' ,url: ''},  
                        //{name:'Portfolio',icon: 'mdi-bank' ,url: ''},  
                        {name:'Support',icon: 'mdi-folder-home' ,url: ''},  
                        {name:'Contact',icon: 'mdi-phone' ,url: ''},  
-                       ], 
+                       ],
+              //methods:
+              // html.lang = 'ar'
+              // html.dir = 'rtl'
 	}
   }
 }

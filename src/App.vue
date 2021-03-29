@@ -2,6 +2,7 @@
   <v-app>
     <SwitchLocale/>
     <v-main>
+      <router-view></router-view>
     </v-main>
     <footerr/>
   </v-app>
