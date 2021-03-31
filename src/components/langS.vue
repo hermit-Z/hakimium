@@ -27,8 +27,8 @@
 		<!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
        <div class="ma-2" v-for="Nitem in Nitems" :key="Nitem.name" >
           <v-icon>{{Nitem.icon}}</v-icon>
-        <!-- <router-link :to="Nitem.url" class="green--text">{{Nitem.name}}</router-link> -->
-		<router-link :to="'/'+$vuetify.lang.current + Nitem.url" class="green--text"><!-- {{Nitem.name}} -->{{'/'+$vuetify.lang.current + Nitem.url}} </router-link>
+        <!-- <router-link :to="Nitem.urlname" class="green--text">{{Nitem.name}}</router-link> -->
+		<router-link :to="{name: Nitem.urlname , params:{lang:$vuetify.lang.current}}" class="green--text"><!-- {{Nitem.name}} -->{{ Nitem.name}} </router-link>
        </div>
       <v-spacer></v-spacer>
       <router-link to="/" class="green--text" >Home</router-link>
@@ -45,7 +45,7 @@
 	<v-select
           col="1"
           v-if="StatLang===true"
-          v-on:change="StatLang = !StatLang ;$vuetify.lang.current =Select.loca"
+          v-on:change="StatLang = !StatLang ;$vuetify.lang.current =Select.loca "
           v-model="Select"
           :items= "items"
           item-text="name"
@@ -116,13 +116,13 @@ export default {
                   ],
 
                Nitems: [
-                       {name:'Home',icon: 'mdi-home' ,url: '/'},  
-                       {name:'About',icon: 'mdi-book-account' ,url: '/About'},  
-                       {name:'Services',icon: 'mdi-cog' ,url: ''},  
-                       //{name:'Product',icon: 'mdi-folder-home' ,url: ''},  
-                       //{name:'Portfolio',icon: 'mdi-bank' ,url: ''},  
-                       {name:'Support',icon: 'mdi-folder-home' ,url: ''},  
-                       {name:'Contact',icon: 'mdi-phone' ,url: ''},  
+                       {name:'Home',icon: 'mdi-home' ,urlname: 'Home'},  
+                       {name:'About',icon: 'mdi-book-account' ,urlname: 'About'},  
+                       {name:'Services',icon: 'mdi-cog' ,urlname: ''},  
+                       //{name:'Product',icon: 'mdi-folder-home' ,urlname: ''},  
+                       //{name:'Portfolio',icon: 'mdi-bank' ,urlname: ''},  
+                       {name:'Support',icon: 'mdi-folder-home' ,urlname: ''},  
+                       {name:'Contact',icon: 'mdi-phone' ,urlname: ''},  
                        ],
               //methods:
               // html.lang = 'ar'
